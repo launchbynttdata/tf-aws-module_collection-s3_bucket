@@ -116,7 +116,7 @@ variable "separator" {
 }
 
 variable "resource_names_map" {
-  description = "A map of key to resource_name that will be used by tf-module-resource_name to generate resource names."
+  description = "A map of key to resource_name that will be used by tf-launch-module_library-resource_name to generate resource names."
   type = map(object(
     {
       name       = string
