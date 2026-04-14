@@ -14,7 +14,7 @@ provider "aws" {
 provider "random" {}
 ```
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -26,7 +26,7 @@ provider "random" {}
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.65.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.100.0 |
 
 ## Modules
 
@@ -54,7 +54,7 @@ provider "random" {}
 | <a name="input_instance_resource"></a> [instance\_resource](#input\_instance\_resource) | Number that represents the instance of the resource. | `number` | `0` | no |
 | <a name="input_maximum_length"></a> [maximum\_length](#input\_maximum\_length) | Number that represents the maximum length the resource name could have. | `number` | `60` | no |
 | <a name="input_separator"></a> [separator](#input\_separator) | Separator to be used in the name | `string` | `"-"` | no |
-| <a name="input_resource_names_map"></a> [resource\_names\_map](#input\_resource\_names\_map) | A map of key to resource\_name that will be used by tf-launch-module\_library-resource\_name to generate resource names. | <pre>map(object(<br>    {<br>      name       = string<br>      max_length = optional(number, 60)<br>    }<br>  ))</pre> | <pre>{<br>  "s3_bucket_source": {<br>    "name": "srcbkt"<br>  },<br>  "s3_bucket_target": {<br>    "name": "targetbkt"<br>  },<br>  "target_bucket_reader_policy": {<br>    "max_length": 60,<br>    "name": "targetbucketplcy"<br>  }<br>}</pre> | no |
+| <a name="input_resource_names_map"></a> [resource\_names\_map](#input\_resource\_names\_map) | A map of key to resource\_name that will be used by tf-launch-module\_library-resource\_name to generate resource names. | <pre>map(object(<br>    {<br>      name       = string<br>      max_length = optional(number)<br>    }<br>  ))</pre> | <pre>{<br>  "s3_bucket_source": {<br>    "name": "srcbkt"<br>  },<br>  "s3_bucket_target": {<br>    "name": "targetbkt"<br>  },<br>  "target_bucket_reader_policy": {<br>    "max_length": 60,<br>    "name": "targetbucketplcy"<br>  }<br>}</pre> | no |
 | <a name="input_block_public_acls"></a> [block\_public\_acls](#input\_block\_public\_acls) | Whether Amazon S3 should block public ACLs for this bucket. | `bool` | `true` | no |
 | <a name="input_block_public_policy"></a> [block\_public\_policy](#input\_block\_public\_policy) | Whether Amazon S3 should block public bucket policies for this bucket. | `bool` | `true` | no |
 | <a name="input_ignore_public_acls"></a> [ignore\_public\_acls](#input\_ignore\_public\_acls) | Whether Amazon S3 should ignore public ACLs for this bucket. | `bool` | `true` | no |
@@ -81,4 +81,4 @@ provider "random" {}
 | <a name="output_id"></a> [id](#output\_id) | ID of the S3 Bucket |
 | <a name="output_target_bucket_arn"></a> [target\_bucket\_arn](#output\_target\_bucket\_arn) | ARN of the S3 Bucket |
 | <a name="output_target_bucket_id"></a> [target\_bucket\_id](#output\_target\_bucket\_id) | ID of the S3 Bucket |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

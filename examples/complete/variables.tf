@@ -121,7 +121,7 @@ variable "resource_names_map" {
   type = map(object(
     {
       name       = string
-      max_length = optional(number, 60)
+      max_length = optional(number)
     }
   ))
   default = {

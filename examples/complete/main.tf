@@ -60,5 +60,6 @@ module "resource_names" {
   cloud_resource_type     = each.value.name
   instance_env            = var.instance_env
   instance_resource       = var.instance_resource
-  maximum_length          = each.value.max_length
+  maximum_length          = coalesce(each.value.max_length, var.maximum_length)
+  separator               = var.separator
 }
